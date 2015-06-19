@@ -1,0 +1,23 @@
+{
+  "name": "DTC-Properties",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Capocaccia/DTC-Properties",
+  "authors": [
+    "Carter Capocaccia <carter.capocaccia@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.1",
+    "angular-route": "~1.4.1",
+    "firebase": "~2.2.7"
+  }
+}
