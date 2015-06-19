@@ -1,0 +1,32 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button data-dismiss="modal" class="close"><span>&times;</span></button>
+      <h1>Maintenance Request</h1>
+    </div>
+    <div class="modal-body">
+      <form name="addressForm" novalidate="novalidate">
+        <div ng-class="{'has-success': addressForm.n.$dirty &amp;&amp; main.person.name.length &gt; 1, 'has-error': addressForm.n.$dirty &amp;&amp; !main.person.name}" class="form-group">
+          <label class="control-label">Name</label>
+          <input name="n" type="text" placeholder="John" required="required" class="form-control"/>
+        </div>
+        <div ng-class="{'has-success': addressForm.p.$dirty &amp;&amp; main.person.phone, 'has-error': addressForm.p.$dirty &amp;&amp; !main.person.phone}" class="form-group">
+          <label class="control-label">Phone</label>
+          <input name="p" type="tel" placeholder="615-555-5555" required="required" class="form-control"/>
+        </div>
+        <div ng-class="{'has-success': addressForm.t.$dirty &amp;&amp; main.person.twitter.length &gt; 1 &amp;&amp; main.person.twitter[0] === '@' , 'has-error': addressForm.t.$dirty &amp;&amp; (main.person.twitter.length &lt; 2 || main.person.twitter[0] !== '@')}" class="form-group">
+          <label class="control-label">Email Address</label>
+          <input name="t" type="text" placeholder="John@doe.com" required="required" class="form-control"/>
+        </div>
+        <div ng-class="{'has-success': addressForm.t.$dirty &amp;&amp; addressForm.i.$valid , 'has-error': addressForm.t.$dirty &amp;&amp; addressForm.i.$invalid }" class="form-group">
+          <label class="control-label">Message</label>
+          <input name="i" type="text" placeholder="Please be as descriptive as possible" required="required" class="form-control"/>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button ng-click="main.cancel()" class="btn btn-danger">Cancel</button>
+      <button ng-click="addressForm.$valid &amp;&amp; main.saveAddress()" ng-disabled="addressForm.$invalid" class="btn btn-primary">Save</button>
+    </div>
+  </div>
+</div>
