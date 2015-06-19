@@ -1,5 +1,5 @@
 angular
   .module('dtcModule')
-  .controller("aboutCtrl", function(){
+  .controller("AboutCtrl", function(){
 
   });

@@ -1,5 +1,5 @@
 angular
-  .module("dtcModule", [])
+  .module('dtcModule', ['ngRoute'])
   // .config(function ($routeProvider) {
   //   $routeProvider
   //   .when('/', {
